@@ -1,7 +1,8 @@
 var http = require('http');
 
 var server = http.createServer(function(req, res) {
-  if (var i = req.headers['x-rci-i']) {
+  var i;
+  if (i = req.headers['x-rci-i']) {
     res.statusCode = 200;
     res.end(i);
     console.log('custom header value: ' + i);
